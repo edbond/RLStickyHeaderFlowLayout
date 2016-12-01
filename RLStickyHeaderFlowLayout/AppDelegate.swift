@@ -1,9 +1,11 @@
 //
-//  AppDelegate.swift
+//  RLStickyHeaderFlowLayout.swift
 //  RLStickyHeaderFlowLayout
 //
-//  Created by Roy lee on 16/7/18.
+//  Created by Roy lee on 16/7/17.
 //  Copyright © 2016年 Roy lee. All rights reserved.
+//
+// Converted to Swift 3 by Mark R. Masterson For Ridebrain
 //
 
 import UIKit
