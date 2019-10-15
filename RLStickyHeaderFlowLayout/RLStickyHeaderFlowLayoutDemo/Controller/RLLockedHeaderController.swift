@@ -41,13 +41,13 @@ class RLLockedHeaderController: RLBaseCollectionController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        collectionView!.scrollIndicatorInsets = UIEdgeInsetsMake(44, 0, 0, 0);
+        collectionView!.scrollIndicatorInsets = UIEdgeInsets.init(top: 44, left: 0, bottom: 0, right: 0);
         
         let add = UIBarButtonItem.init(title: "Add", style: .plain, target: self, action: #selector(RLLockedHeaderController.add))
         navigationItem.rightBarButtonItem = add
     }
     
-    func add() {
+    @objc func add() {
         
         weak var weakSelf = self
         collectionView?.performBatchUpdates({

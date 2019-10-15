@@ -118,8 +118,8 @@ extension RLStickyHeaderFlowLayout {
                 attributes.frame = frame
                 
                 let indexPath = attributes.indexPath
-                let isHeader = attributes.representedElementKind == UICollectionElementKindSectionHeader
-                let isFooter = attributes.representedElementKind == UICollectionElementKindSectionFooter
+                let isHeader = attributes.representedElementKind == UICollectionView.elementKindSectionHeader
+                let isFooter = attributes.representedElementKind == UICollectionView.elementKindSectionFooter
                 
                 if isHeader {
                     headers[indexPath.section] = attributes
@@ -182,7 +182,7 @@ extension RLStickyHeaderFlowLayout {
                     var header = headers[indexPathKey]
                     // CollectionView automatically removes headers not in bounds
                     if header == nil {
-                        header = (layoutAttributesForSupplementaryView(ofKind: UICollectionElementKindSectionHeader, at: IndexPath.init(item: 0, section: indexPath.section)))! as UICollectionViewLayoutAttributes
+                        header = (layoutAttributesForSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, at: IndexPath.init(item: 0, section: indexPath.section)))! as UICollectionViewLayoutAttributes
                         
                         if CGSize.zero.equalTo(header!.frame.size) == false {
                             allItems.append(header!)
@@ -319,7 +319,7 @@ extension UICollectionViewLayoutAttributes {
         let frame = value(forKey: "frame")
         
         
-        return "RLStickyHeaderFlowLayout indexPath: \(indexPath) zIndex: \(zIndex) valid: \(isValid()) kind: \(representedElementKind) frame:\(frame)"
+        return "RLStickyHeaderFlowLayout indexPath: \(String(describing: indexPath)) zIndex: \(String(describing: zIndex)) valid: \(isValid()) kind: \(String(describing: representedElementKind)) frame:\(String(describing: frame))"
     }
     
     func isValid() -> Bool {

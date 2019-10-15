@@ -10,7 +10,7 @@
 //
 
 import XCTest
-@testable import RLStickyHeaderFlowLayoutFramework
+//@testable import RLStickyHeaderFlowLayoutFramework
 
 class RLStickyHeaderFlowLayoutFrameworkTests: XCTestCase {
     

@@ -36,12 +36,12 @@ class RLStickyParallaxHeaderController: RLBaseCollectionController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        collectionView!.scrollIndicatorInsets = UIEdgeInsetsMake(0, 0, 0, 0);
+        collectionView!.scrollIndicatorInsets = UIEdgeInsets.init(top: 0, left: 0, bottom: 0, right: 0);
     }
     
     override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         
-        if kind == UICollectionElementKindSectionHeader {
+        if kind == UICollectionView.elementKindSectionHeader {
             
             let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "sectionHeader", for: indexPath) as? RLSectionHeader
             

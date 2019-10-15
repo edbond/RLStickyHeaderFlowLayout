@@ -36,7 +36,7 @@ class RLGrowHeaderController: RLBaseCollectionController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        collectionView!.scrollIndicatorInsets = UIEdgeInsetsMake(44, 0, 0, 0);
+        collectionView!.scrollIndicatorInsets = UIEdgeInsets.init(top: 44, left: 0, bottom: 0, right: 0);
     }
     
     override func didReceiveMemoryWarning() {
